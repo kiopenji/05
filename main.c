@@ -2,19 +2,28 @@
 
 int main(void)
 {
-    int num;
-    int i;
-    int sum = 0;
+    int num1, num2;
+    char op;
 
-    printf("input a number: ");
-    scanf("%i", &num);
+    printf("enter the calculation : ");
+    scanf("%d %c %d", &num1, &op, &num2);
 
-    for ( i = 0; i < num; i++)
+    if (op == '+')
     {
-        sum = sum + i + 1;
+        printf("= %d\n", num1 + num2);
+    }
+    else if (op == '-')
+    {
+        printf("= %d\n", num1 - num2);
+    }
+    else if (op == '*')
+    {
+        printf("= %d\n", num1 * num2);
+    }
+    else if (op == '/')
+    {
+        printf("= %d\n", num1 / num2);
     }
 
-    printf("The result is %i\n", sum);
-    
     return 0;
 }
